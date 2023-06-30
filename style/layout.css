@@ -24,10 +24,14 @@
     transform: translateY(-100%);
 }
 
-.f-nav {
+.nav-sec {
     background: #fff;
     position: fixed;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-sec #gnb .gnb_ul li a {
+    color: #121212;
 }
 
 .header .dg-logo {
@@ -206,16 +210,28 @@
 
 .main4 {
     height: 100vh;
+    text-align: center;
 }
 
 .main4 .tac {
     font-size: 3.8rem;
 }
 
-.swiper {
+.main4 .swiper-sec {
+    /*height: 40vh;*/
+}
+
+.main4 .swiper-sec .mySwiper {
     width: 100%;
     height: 100%;
-    margin: 5% 0;
+}
+
+.main4 .swiper-sec .swiper {
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    z-index: 1;
+    padding: 85px 100px;
 }
 
 .main4 .swiper .swiper-slide {
@@ -223,10 +239,9 @@
     height: 100%;
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: #ffffff;
     box-shadow: 7px 7px 20px 0 rgba(64, 64, 64, 0.1);
     border-radius: 20px;
-    display: flex;
     justify-content: center;
     align-items: center;
     -webkit-justify-content: center;
@@ -234,10 +249,10 @@
 
 .swiper-slide a {
     display: block;
-    padding: 25% 15%;
+    padding: 60px 0;
 }
 
-.swiper-slide a div{
+.swiper-slide a div {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -251,16 +266,16 @@
     margin: 0 auto;
 }
 
-.swiper-slide a div h3,p {
+.swiper-slide a div h3, .swiper-slide a div p {
     margin: 10px 0;
 }
 
 .swiper-slide a div h3 {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .dg-slogan {
-
+    margin-bottom: 30px;
 }
 
 .v-btn {
@@ -280,6 +295,34 @@
     line-height: 45px;
 }
 
-
-
 /************************* footer *************************/
+
+.footer-con {
+    background-color: #222222;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+}
+
+.footer-con .flx {
+    justify-content: space-between;
+}
+
+.footer-con .footer-left .footer-logo {
+    margin: auto 0;
+}
+
+.footer-con .footer-left .footer-txt p {
+    font-weight: 200;
+}
+
+.footer-con .footer-left .footer-txt .flx{
+    justify-content: left;
+}
+
+.footer-con .footer-left .footer-txt .flx li {
+    margin-right: 5px;
+}
+
+.footer-con .footer-right {
+    text-align: right;
+}
