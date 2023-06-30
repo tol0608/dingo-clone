@@ -1,40 +1,285 @@
 /************************* header *************************/
-.header div{
+.header div {
     font-family: "Poppins", serif;
     font-weight: 500;
 }
 
-/************************* slide *************************/
+.header {
+    width: 100%;
+    min-height: 70px;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0 20px;
+    z-index: 10;
+    transition: all ease .5s;
+}
 
+.header_on {
+    background-color: #FFFFFF;
+}
+
+.header.hide {
+    transform: translateY(-100%);
+}
+
+.f-nav {
+    background: #fff;
+    position: fixed;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header .dg-logo {
+    width: 10%;
+}
+
+#gnb {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s;
+}
+
+.header .gnb {
+    width: 80%;
+    max-width: 550px;
+    transition: all 0.6s;
+}
+
+.header .gnb::after {
+    content: '';
+    width: 100vw;
+    height: 0;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    transition: height 0.6s;
+    z-index: -1;
+}
+
+.header .gnb:hover::after {
+    height: 140px;
+    transition: height 0.5s;
+    color: #121212;
+}
+
+.gnb .gnb_ul {
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.gnb .gnb_ul > li {
+    position: relative;
+    padding: 30px 0;
+    flex: 1 0 auto;
+}
+
+.gnb .gnb_ul > li > a {
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.gnb .lnb {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    text-align: left;
+}
+
+.gnb:hover .lnb {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    visibility: visible;
+    line-height: 2rem;
+    transition: opacity 0.5s;
+    opacity: 1;
+    z-index: 9;
+}
+
+.gnb .lnb li {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.gnb .lnb li:last-child {
+    margin-bottom: 0;
+}
+
+.gnb .lnb a {
+    top: 0;
+    left: 0;
+    font-size: 14px;
+}
+
+.gnb:hover .lnb a {
+    color: #222222;
+    line-height: 1.5rem;
+}
+
+.gnb .gnb_ul .lnb a {
+    color: #555;
+    transition: all ease .5s;
+}
+
+.gnb .gnb_ul .lnb a:hover {
+    color: #000000;
+}
+
+.gnb .dg-l-btn {
+    width: 10%;
+}
+
+.header_on .gnb {
+    max-width: 720px;
+}
+
+.header_on .gnb li a {
+    color: #121212;
+}
 
 /************************* main1 *************************/
 
+.main1 {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 /************************* main2 *************************/
 
-.swiper {
-    width: 100%;
-    height: 100%;
+.main2 {
+    height: 60vh;
 }
 
-.swiper-slide {
-    height: 50vh;
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main2 .main2_con {
+    padding: 8% 5%;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.main2_con p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5%;
+}
+
+.main2_con h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: "Poppins", serif;
 }
 
 /************************* main3 *************************/
 
+.main3 {
+    height: 70vh;
+}
+
+.main3_con {
+    padding: 10% 5%;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    background: linear-gradient(135deg, rgba(0, 161, 233, 1) 0%, rgba(255, 204, 0, 1) 100%);;
+}
+
+.main3_con li {
+    color: #FFFFFF;
+}
+
+.main3_con li h3 {
+    font-size: 4rem;
+}
+
+.main3_con li p {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
 /************************* main4 *************************/
+
+.main4 {
+    height: 100vh;
+}
+
+.main4 .tac {
+    font-size: 3.8rem;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin: 5% 0;
+}
+
+.main4 .swiper .swiper-slide {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    box-shadow: 7px 7px 20px 0 rgba(64, 64, 64, 0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+}
+
+.swiper-slide a {
+    display: block;
+    padding: 25% 15%;
+}
+
+.swiper-slide a div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-width: 110px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.swiper-slide a div h3,p {
+    margin: 10px 0;
+}
+
+.swiper-slide a div h3 {
+    margin-top: 20px;
+}
+
+.dg-slogan {
+
+}
+
+.v-btn {
+    width: 180px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: #121212;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.v-btn a {
+    display: inline;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+}
+
+
 
 /************************* footer *************************/

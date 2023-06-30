@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Noto Sans KR", serif;
     color: #000;
     letter-spacing: -0.5px;
     margin: 0;
@@ -25,7 +25,6 @@ body {
     margin: 0;
     padding: 0;
     font-weight: 400;
-    background-color: #f1f1f1;
 }
 
 div,
@@ -35,7 +34,6 @@ li,
 dl,
 dt,
 dd,
-p,
 input,
 textarea,
 select,
@@ -52,7 +50,7 @@ iframe,
 object,
 menu,
 button {
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Poppins", "Noto Sans KR", serif;
     margin: 0;
     padding: 0;
 }
