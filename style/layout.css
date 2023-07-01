@@ -30,7 +30,7 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.nav-sec #gnb .gnb_ul li a {
+.nav-sec #gnb .gnb_ul li a, .nav-sec > .dg-l-btn a {
     color: #121212;
 }
 
@@ -82,7 +82,7 @@
     flex: 1 0 auto;
 }
 
-.gnb .gnb_ul > li > a {
+.gnb .gnb_ul > li > a, .dg-l-btn a {
     font-weight: 500;
     color: #FFFFFF;
 }
@@ -98,6 +98,7 @@
 .gnb:hover .lnb {
     width: 100%;
     height: auto;
+    margin-top: 5px;
     position: absolute;
     top: 80px;
     left: 0;
@@ -106,6 +107,7 @@
     transition: opacity 0.5s;
     opacity: 1;
     z-index: 9;
+    font-weight: 400;
 }
 
 .gnb .lnb li {
@@ -145,23 +147,33 @@
     max-width: 720px;
 }
 
-.header_on .gnb li a {
+.header_on .gnb li a, .header_on .dg-l-btn a {
     color: #121212;
 }
 
 /************************* main1 *************************/
 
 .main1 {
-    height: 100vh;
     overflow: hidden;
     margin: 0;
     padding: 0;
 }
 
+.main1 video {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main1 video {
+        height: 600px;
+        object-fit: cover;
+    }
+}
+
 /************************* main2 *************************/
 
 .main2 {
-    height: 60vh;
+    height: 100%;
 }
 
 .main2 .main2_con {
@@ -180,10 +192,40 @@
     font-family: "Poppins", serif;
 }
 
+@media (max-width: 1300px) {
+    .main2_con p {
+        font-size: 1.2rem;
+    }
+
+    .main2_con h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .main2_con p {
+        font-size: 1.1rem;
+    }
+
+    .main2_con h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main2_con p {
+        font-size: 1rem;
+    }
+
+    .main2_con h2 {
+        font-size: 2rem;
+    }
+}
+
 /************************* main3 *************************/
 
 .main3 {
-    height: 70vh;
+    height: 100%;
 }
 
 .main3_con {
@@ -206,10 +248,55 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
+@media (max-width: 1300px) {
+    .main3_con li h3 {
+        font-size: 3.5rem;
+    }
+
+    .main3_con li p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .main3_con {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .main3_con li {
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .main3_con li:last-child {
+        margin-bottom: 0;
+    }
+
+    .main3_con li h3 {
+        font-size: 3rem;
+    }
+
+    .main3_con li p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main3_con li h3 {
+        font-size: 2.6rem;
+    }
+
+    .main3_con li p {
+        font-size: 1.4rem;
+    }
+}
+
 /************************* main4 *************************/
 
 .main4 {
-    height: 100vh;
+    height: 100%;
+    padding: 5% 0;
     text-align: center;
 }
 
@@ -218,12 +305,13 @@
 }
 
 .main4 .swiper-sec {
-    /*height: 40vh;*/
+    width: 100%;
 }
 
 .main4 .swiper-sec .mySwiper {
     width: 100%;
     height: 100%;
+    padding: 85px 100px;
 }
 
 .main4 .swiper-sec .swiper {
@@ -231,7 +319,6 @@
     overflow: hidden;
     list-style: none;
     z-index: 1;
-    padding: 85px 100px;
 }
 
 .main4 .swiper .swiper-slide {
@@ -278,21 +365,69 @@
     margin-bottom: 30px;
 }
 
+.dg-slogan img {
+    width: 70%;
+    max-width: 476px;
+}
+
 .v-btn {
     width: 180px;
     height: 45px;
-    border-radius: 30px;
-    background-color: #121212;
+    padding: 10px 50px;
+    margin: 0 auto;
     color: #FFFFFF;
     text-align: center;
-    margin: 0 auto;
+    font-weight: 700;
+    background-color: #232323;
+    border-radius: 30px;
 }
 
-.v-btn a {
-    display: inline;
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
+.v-btn:hover {
+    background-color: #ea002b;
+}
+
+@media (max-width: 1300px) {
+    .main4 .tac {
+        font-size: 3rem;
+    }
+
+    .main4 .swiper-sec .mySwiper {
+        padding: 60px 100px;
+    }
+
+    .v-btn {
+        padding: 10px 40px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .main4 .tac {
+        font-size: 2.5rem;
+    }
+
+    .main4 .swiper-sec .mySwiper {
+        padding: 50px 100px;
+    }
+    .v-btn {
+        padding: 10px 30px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main4 .tac {
+        font-size: 2rem;
+    }
+
+    .main4 .swiper-sec .mySwiper {
+        padding: 40px 80px;
+    }
+    .v-btn {
+        padding: 10px 25px;
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
 }
 
 /************************* footer *************************/
@@ -315,7 +450,7 @@
     font-weight: 200;
 }
 
-.footer-con .footer-left .footer-txt .flx{
+.footer-con .footer-left .footer-txt .flx {
     justify-content: left;
 }
 

@@ -75,7 +75,7 @@
         </div>
     </header>
     <section class="main1">
-        <div>
+        <div class="video-box">
             <video autoplay muted loop>
                 <source src="./img/IMG_3744.MOV" type="video/mp4">
             </video>
@@ -83,7 +83,7 @@
     </section>
     <section class="main2">
         <div class="main2_con">
-            <p>변화하는 미디어 시대에 가장 최적화된 콘텐츠를 만드는 크리에이티브 그룹</p>
+            <p class="ellipsis2">변화하는 미디어 시대에 가장 최적화된 콘텐츠를 만드는 크리에이티브 그룹</p>
             <h2>Global No.1 <br>
                 Digital Content Studio
             </h2>
@@ -107,9 +107,72 @@
     </section>
     <section class="main4">
         <h2 class="tac">라이프스타일별 맞춤화된 다수의 채널 보유</h2>
-        <div class="swiper-sec pb30 ">
+        <div class="swiper-sec mb10">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div>
+                                <img src="img/main2/dg_dgg.png" alt="DGG_LOGO">
+                                <h3>DGG</h3>
+                                <p class="txt-gray">music</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div>
+                                <img src="img/main2/dg_free.png" alt="freestyle_LOGO">
+                                <h3>딩고 프리스타일</h3>
+                                <p class="txt-gray">Hip-Hop</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div>
+                                <img src="img/main2/dg_health.png" alt="health_LOGO">
+                                <h3>딩고 헬스</h3>
+                                <p class="txt-gray">Health</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div>
+                                <img src="img/main2/dg_music.png" alt="music_LOGO">
+                                <h3>딩고 뮤직</h3>
+                                <p class="txt-gray">music</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div>
+                                <img src="img/main2/dg_r.png" alt="R_LOGO">
+                                <h3>라이징 보이스</h3>
+                                <p class="txt-gray">music</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div>
+                                <img src="img/main2/dg_story.png" alt="story_LOGO">
+                                <h3>딩고 스토리</h3>
+                                <p class="txt-gray">Healing</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div>
+                                <img src="img/main2/dg_studio.png" alt="studio_LOGO">
+                                <h3>딩고 스튜디오</h3>
+                                <p class="txt-gray">Entertainment</p>
+                            </div>
+                        </a>
+                    </div>
                     <div class="swiper-slide">
                         <a href="#">
                             <div>
@@ -176,9 +239,11 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div class="mb20">
             <div class="dg-slogan"><img src="./img/main_slogan.svg" alt="Dingo_slogan"></div>
-            <div class="v-btn"><a href="#">View More</a></div>
+            <a href="#" class="v-btn">
+                View More
+            </a>
         </div>
     </section>
     <footer>
@@ -210,58 +275,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 <script src="js/jquery.counterup.min.js"></script>
 <script src="jquery.counterup.min.js"></script>
-<script>
-    $("document").ready(function () {
-        $('.header').hover(function () {
-            $(this).addClass("header_on");
-
-        }, function () {
-            $(this).removeClass("header_on");
-        })
-    });
-</script>
-<script>
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 0) {
-            $('.header').addClass("nav-sec");
-            $('.header').removeAttr('style');
-        } else {
-            $('.header').removeClass("nav-sec");
-            $('.header').removeAttr('style');
-        }
-        var sub_leftojb = $('.header').offset();
-        var sub_left_hei = $('.header').height();
-        var sub_y = parseInt(sub_leftojb.top) + parseInt(sub_left_hei);
-    });
-
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-        var mainSection = $('.main2').offset().top;
-
-        if (mainSection < $(window).scrollTop()) {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                $(".header").removeClass('hide');
-            } else {
-                $(".header").addClass('hide');
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    }
-</script>
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 5, // 몇 개 보이게 할것인지
-        spaceBetween: 50, // 각 요소 간 간격
-        autoHeight: true,  // 현재 활성 슬라이드높이 맞게 높이조정
-        autoplay: {     //자동슬라이드 (false-비활성화)
-            delay: 2500, // 시간 설정
-        },
-        loop: true,
-        freeMode: false,
-        allowTouchMove: false, // (false-스와이핑안됨)버튼으로만 슬라이드 조작이 가능
-    });
-</script>
+<script src="js/gnb.js"></script>
+<script src="js/swiper.js"></script>
 <script>
     $('.counter').counterUp();
 </script>
