@@ -30,3 +30,25 @@ window.onscroll = function() {
         prevScrollPos = currentScrollPos;
     }
 };
+
+// 스크롤 버튼
+$(document).ready(function() {
+    // main2에 내려가기전까지 버튼 숨기기
+    $('.t-btn').hide();
+
+    // 스크롤 이벤트 감지
+    $(window).scroll(function() {
+        // main2의 위치를 확인하여 버튼 보이기/숨기기
+        var section2Offset = $('.main2').offset().top;
+        if ($(window).scrollTop() > section2Offset) {
+            $('.t-btn').fadeIn();
+        } else {
+            $('.t-btn').fadeOut();
+        }
+    });
+
+    // 버튼 클릭 시 상단으로 스크롤
+    $('.t-btn').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
+});

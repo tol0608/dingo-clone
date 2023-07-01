@@ -151,6 +151,22 @@
     color: #121212;
 }
 
+@media (max-width: 1600px) {
+    .header {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    #gnb {
+        display: none;
+    }
+}
+
 /************************* main1 *************************/
 
 .main1 {
@@ -232,7 +248,7 @@
     padding: 10% 5%;
     justify-content: space-between;
     flex-flow: row wrap;
-    background: linear-gradient(135deg, rgba(0, 161, 233, 1) 0%, rgba(255, 204, 0, 1) 100%);;
+    background: linear-gradient(135deg, rgba(0, 161, 233, 1) 0%, rgba(255, 204, 0, 1) 100%);
 }
 
 .main3_con li {
@@ -409,6 +425,7 @@
     .main4 .swiper-sec .mySwiper {
         padding: 50px 100px;
     }
+
     .v-btn {
         padding: 10px 30px;
         font-size: 0.8rem;
@@ -423,6 +440,7 @@
     .main4 .swiper-sec .mySwiper {
         padding: 40px 80px;
     }
+
     .v-btn {
         padding: 10px 25px;
         font-size: 0.7rem;
@@ -435,7 +453,7 @@
 .footer-con {
     background-color: #222222;
     color: #FFFFFF;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .footer-con .flx {
@@ -460,4 +478,72 @@
 
 .footer-con .footer-right {
     text-align: right;
+}
+
+
+@media (max-width: 1600px) {
+    .footer-con .wrap {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-con .wrap {
+        flex-flow: column;
+    }
+
+    .footer-con .wrap .footer-left {
+        justify-content: left;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    .footer-con .wrap .footer-right {
+        display: flex;
+        flex-wrap: nowrap;
+        text-align: left;
+        padding-top: 15px;
+    }
+
+    .footer-con .wrap .footer-right p:first-child {
+        order: 2;
+        margin-left: 5px;
+    }
+}
+
+/************************* t-btn *******************************/
+
+.t-btn {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: #FFFFFF;
+    position: fixed;
+    top: 90%;
+    left: 95%;
+    transition: all ease-in 0.5s;
+}
+
+.t-btn:hover {
+    cursor: pointer;
+}
+
+.t-btn p {
+    height: 100%;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+@media (max-width: 1300px) {
+    .t-btn {
+        left: 92%;
+    }
+}
+
+@media (max-width: 768px) {
+    .t-btn {
+        left: 85%;
+    }
 }
